@@ -1,0 +1,11 @@
+<div class="chart-box" [class.active]="(isActive$ | async) && showBorder" (click)="select()">
+  <div class="chart-info">
+    <span class="symbol">{{ symbol }}</span>
+    <span class="price">21542.50</span>
+  </div>
+  <div class="visual-placeholder">
+    <svg width="100%" height="60" viewBox="0 0 100 40">
+      <path d="M0,30 Q25,10 50,30 T100,20" fill="none" stroke="#4CAF50" stroke-width="2" />
+    </svg>
+  </div>
+</div>

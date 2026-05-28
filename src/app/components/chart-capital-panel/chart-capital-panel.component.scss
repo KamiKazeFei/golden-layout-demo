@@ -1,0 +1,15 @@
+.combined-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+.chart-section {
+  flex: 1;
+  min-height: 0;
+}
+.capital-section {
+  height: 120px;
+  flex-shrink: 0;
+  border-top: 2px solid #333;
+}

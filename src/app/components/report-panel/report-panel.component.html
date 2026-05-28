@@ -1,0 +1,33 @@
+<div class="panel-container">
+  <app-panel-header title="報表">
+    <button *ngIf="!isFloating" class="btn-ctrl" (click)="float.emit()" title="浮動">口</button>
+    <button *ngIf="isFloating" class="btn-ctrl" (click)="dock.emit()" title="嵌入">內</button>
+    <button class="btn-ctrl btn-close" (click)="close.emit()" title="關閉">×</button>
+  </app-panel-header>
+  <div class="panel-body">
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>時間</th>
+          <th>商品</th>
+          <th>方向</th>
+          <th>價格</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11:20:05</td>
+          <td>TX06</td>
+          <td>買入</td>
+          <td>21500</td>
+        </tr>
+        <tr>
+          <td>11:15:30</td>
+          <td>TX06</td>
+          <td>賣出</td>
+          <td>21480</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

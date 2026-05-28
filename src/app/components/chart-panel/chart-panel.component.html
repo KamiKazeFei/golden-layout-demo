@@ -1,0 +1,22 @@
+<div class="panel-container">
+  <app-panel-header title="多圖表管理">
+    <div class="layout-btns">
+      <button (click)="setLayout(1)">1</button>
+      <button (click)="setLayout(2)">2</button>
+      <button (click)="setLayout(4)">4</button>
+    </div>
+  </app-panel-header>
+  <div
+    class="panel-body"
+    *ngIf="{ count: chartCount$ | async, symbols: symbols$ | async } as data"
+  >
+    <div class="charts-grid" [ngClass]="'grid-' + data.count">
+      <app-single-chart
+        *ngFor="let s of data.symbols"
+        [symbol]="s"
+        [showBorder]="(data.count || 0) > 1"
+      >
+      </app-single-chart>
+    </div>
+  </div>
+</div>

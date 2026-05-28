@@ -1,0 +1,28 @@
+<div class="panel-container">
+  <app-panel-header title="交易">
+    <button *ngIf="!isFloating" class="btn-float" (click)="float.emit()">浮動 (Float)</button>
+    <button *ngIf="isFloating" class="btn-dock" (click)="dock.emit()">歸位 (Dock)</button>
+  </app-panel-header>
+  <div class="panel-body">
+    <div class="trade-form">
+      <div class="input-group">
+        <label>標的</label>
+        <strong *ngIf="activeSymbol$ | async as symbol">{{ symbol }}</strong>
+      </div>
+      <div class="order-group">
+        <div class="input-group">
+          <label>價格</label>
+          <input type="number" [value]="tradePrice$ | async" (input)="updatePrice($event)" />
+        </div>
+        <div class="input-group">
+          <label>數量</label>
+          <input type="number" [value]="tradeQuantity$ | async" (input)="updateQuantity($event)" />
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn-buy">買進 {{ activeSymbol$ | async }}</button>
+        <button class="btn-sell">賣出 {{ activeSymbol$ | async }}</button>
+      </div>
+    </div>
+  </div>
+</div>

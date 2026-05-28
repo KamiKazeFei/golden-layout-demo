@@ -1,0 +1,42 @@
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1e1e1e;
+  color: #ccc;
+}
+.panel-body {
+  flex: 1;
+  padding: 10px;
+  overflow: hidden;
+}
+.layout-btns {
+  display: flex;
+  gap: 4px;
+}
+.layout-btns button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.layout-btns button:hover {
+  background: #555;
+}
+.charts-grid {
+  display: grid;
+  gap: 8px;
+  height: 100%;
+}
+.grid-1 {
+  grid-template-columns: 1fr;
+}
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}

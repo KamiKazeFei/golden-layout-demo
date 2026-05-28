@@ -1,0 +1,123 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-tool {
+  height: 40px;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #fff;
+}
+
+.footer-tool {
+  height: 40px;
+  background-color: #d0d0d0;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 1.2rem;
+  border-top: 2px solid #fff;
+  gap: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  position: relative;
+  /* GoldenLayout needs absolute dimensions, flex-grow usually handles this 
+     but sometimes it needs 100% height minus header/footer */
+  height: calc(100vh - 80px);
+}
+
+.panel-content {
+  padding: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+}
+
+.panel-content h2,
+.panel-content h3 {
+  margin-top: 0;
+}
+
+.action-btn,
+.dock-btn {
+  padding: 5px 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-btn:hover,
+.dock-btn:hover {
+  background-color: #333;
+}
+
+/* Floating Panel Styles */
+.floating-trade-panel {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.floating-report-panel {
+  position: absolute;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.floating-header {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  cursor: move; /* Indicates draggability */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating-content {
+  padding: 15px;
+  flex-grow: 1;
+  background-color: #f9f9f9;
+}
+
+/* Angular CDK Drag styles */
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow:
+    0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

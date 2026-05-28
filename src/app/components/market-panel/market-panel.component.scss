@@ -1,0 +1,24 @@
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #1e1e1e;
+  color: #ccc;
+}
+.panel-body {
+  flex: 1;
+  padding: 10px;
+}
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+}
+.up {
+  color: #f44336;
+}
+.down {
+  color: #4caf50;
+}
